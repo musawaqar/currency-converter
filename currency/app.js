@@ -1,6 +1,4 @@
-// let url = "https://api.frankfurter.dev/v1/latest?base=inr&symbols=eur"
-// let baseUrl = "https://latest.currency-api.pages.dev/v1/currencies/pkr.json"
- let baseUrl = "https://latest.currency-api.pages.dev/v1/currencies"
+let baseUrl = "https://latest.currency-api.pages.dev/v1/currencies"
 let dropDOwn = document.querySelectorAll(".dropDown")
 let btn = document.querySelector("button")
 let from = document.querySelector("#from")
@@ -31,16 +29,13 @@ window.addEventListener("DOMContentLoaded", async function() {
 
   await getData(); 
   changeOutput()        
-  //let ourValue = Number(amount.value);
-  //let ans = ourValue * x;
-  //showAnswer(ans, ourValue);
+
 });
 
 dropDOwn.forEach(function (s) {
 s.addEventListener("change",async function apply(event)
 {
-           //from.value= "USD"
-           //to.value="PKR"
+           
            let val = (event.target.value)
            let newVal = (currencyList[val])
            await getData()  
@@ -61,24 +56,7 @@ btn.addEventListener("click", function yes()
 }) 
 async function run()
 {
-//let msg = document.querySelector("#result")
-//console.log(fromVal)
-//console.log(from.value.toLowerCase())
-//console.log(to.value.toLowerCase())
-//f = (from.value.toLowerCase())
-//t = (to.value.toLowerCase())
-//console.log(t)
-//let url = `${baseUrl}/${fromVal}.json`
-//let url = `${baseUrl}/${f}.json`
-//console.log(url)
-//let response = await fetch(url)
-//let  data = await response.json()
-//console.log(data)
-//console.log(fromVal)
- // let show = Math.floor((data[f][t]));
- //x = (data[f][t]);
-//console.log(x)
-//msg.innerText = `1 ${from.value} = ${show} ${to.value} `
+
 await getData()
 fetchAmount(ourValue)
 finalAns(ans)
