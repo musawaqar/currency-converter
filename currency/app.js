@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", async function() {
 dropDOwn.forEach(function (s) {
 s.addEventListener("change",async function apply(event)
 {
-           
+           amount.value = "1"
            let val = (event.target.value)
            let newVal = (currencyList[val])
            await getData()  
